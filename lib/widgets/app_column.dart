@@ -38,8 +38,9 @@ class app_column extends StatelessWidget {
             small_font(text: "879 Reviews")
           ],
         ),
-        SizedBox(height: 20),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        SizedBox(height: 10),
+        Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               icons_and_text(

@@ -51,7 +51,7 @@ class CartController extends GetxController {
             'Item count', 'You should at least add 1 item to the cart.');
       }
     }
-
+    cartRepo.addToCartList(getItems);
     update();
   }
 
@@ -95,5 +95,19 @@ class CartController extends GetxController {
       total += value.quantity! * value.price!;
     });
     return total;
+  }
+
+  List<CartModel> getCartdata() {
+    Setcart = cartRepo.getCartList();
+    return storageItems;
+  }
+
+  set Setcart(List<CartModel> items) {
+    storageItems = items;
+    print("length of the cart items is" + storageItems.length.toString());
+
+    for (int i = 0; i < storageItems.length; i++) {
+      _items.putIfAbsent(storageItems[i].product!.id!, () => storageItems[i]);
+    }
   }
 }

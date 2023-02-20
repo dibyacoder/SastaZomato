@@ -21,7 +21,7 @@ class icons_and_text extends StatelessWidget {
     return Row(
       children: [
         Icon(icon, color: iconcolor),
-        SizedBox(width: 5),
+        SizedBox(width: 2),
         small_font(text: text, color: color)
       ],
     );

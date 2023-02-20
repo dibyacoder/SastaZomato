@@ -172,21 +172,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                                           text:
                                               'With Chinese characteristics.'),
                                       Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           icons_and_text(
                                             icon: Icons.circle_sharp,
-                                            text: 'Normal',
+                                            text: 'Nice',
                                             iconcolor: AppColors.iconColor1,
                                             color: Colors.black,
                                           ),
+                                          SizedBox(width: 3),
                                           icons_and_text(
                                             icon: Icons.location_on,
                                             text: '1.7 km',
                                             iconcolor: AppColors.mainColor,
                                             color: Colors.black,
                                           ),
+                                          SizedBox(width: 3),
                                           icons_and_text(
                                             icon: Icons.access_time_rounded,
                                             text: '32 min',
@@ -206,9 +206,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     );
                   })
               : Container(
-                  child: LoadingAnimationWidget.staggeredDotsWave(
-                    color: Colors.teal,
-                    size: 80,
+                  height: 500,
+                  child: Center(
+                    child: LoadingAnimationWidget.staggeredDotsWave(
+                      color: Colors.teal,
+                      size: 80,
+                    ),
                   ),
                 );
         })
