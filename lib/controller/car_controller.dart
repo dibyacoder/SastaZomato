@@ -104,10 +104,24 @@ class CartController extends GetxController {
 
   set Setcart(List<CartModel> items) {
     storageItems = items;
-    print("length of the cart items is" + storageItems.length.toString());
+    //print("length of the cart items is" + storageItems.length.toString());
 
     for (int i = 0; i < storageItems.length; i++) {
       _items.putIfAbsent(storageItems[i].product!.id!, () => storageItems[i]);
     }
+  }
+
+  void addtohistory() {
+    cartRepo.addtoCartHistorylist();
+    clear();
+  }
+
+  void clear() {
+    _items = {};
+    update();
+  }
+
+  List<CartModel> getCartHistorylist() {
+    return cartRepo.getCartHistoryList();
   }
 }

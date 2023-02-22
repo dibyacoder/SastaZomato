@@ -72,6 +72,11 @@ class CartPage extends StatelessWidget {
                           itemCount: _cartList.length,
                           itemBuilder: (_, index) {
                             return Container(
+                              decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 235, 238, 167),
+                                  borderRadius:
+                                      BorderRadius.circular(dimensions.size20)),
+                              margin: EdgeInsets.all(dimensions.size10),
                               height: dimensions.size20 * 5,
                               width: double.maxFinite,
                               child: Row(
@@ -108,7 +113,6 @@ class CartPage extends StatelessWidget {
                                       width: dimensions.size20 * 5,
                                       height: dimensions.size20 * 5,
                                       margin: EdgeInsets.only(
-                                        bottom: dimensions.size10,
                                         right: dimensions.size10,
                                       ),
                                       decoration: BoxDecoration(
@@ -261,6 +265,7 @@ class CartPage extends StatelessWidget {
                         ),
                       ),
                       GestureDetector(
+                        onTap: () => cartController.addtohistory(),
                         child: Container(
                           padding: EdgeInsets.all(dimensions.size20),
                           decoration: BoxDecoration(
