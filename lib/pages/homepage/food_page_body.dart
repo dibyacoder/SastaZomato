@@ -54,7 +54,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           return popularProducts.isLoaded
               ? Container(
                   //color: Colors.red,
-                  height: dimensions.size260 + dimensions.size30,
+                  height: dimensions.size260,
 
                   child: PageView.builder(
                       controller: pageController,
@@ -255,7 +255,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               );
             },
             child: Container(
-              height: dimensions.size210,
+              height: dimensions.size100 + dimensions.size45 * 2,
               margin: EdgeInsets.only(left: 10, right: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
@@ -271,8 +271,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: dimensions.size45 * 2 + dimensions.size30,
-              margin: const EdgeInsets.only(left: 20, right: 20, bottom: 10),
+              height: dimensions.size45 * 2 + dimensions.size10,
+              margin: const EdgeInsets.only(left: 35, right: 35, bottom: 10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(dimensions.size20),
                   color: index.isEven ? Color(0xff69c5df) : Color(0xFF9294cc),
