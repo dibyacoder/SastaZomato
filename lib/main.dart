@@ -8,9 +8,11 @@ import 'package:get/get.dart';
 
 import 'controller/popular_product_contoller.dart';
 import 'controller/recommended_product_controller.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   await dep.init();
   runApp(const MyApp());
 }

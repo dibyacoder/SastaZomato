@@ -26,8 +26,8 @@ class _splash_pageState extends State<splash_page>
           ..forward();
     animation = CurvedAnimation(parent: controller, curve: Curves.linear);
 
-    Timer(const Duration(seconds: 3),
-        () => Get.offNamed(RouteHelper.getInitial()));
+    Timer(
+        const Duration(seconds: 3), () => Get.offNamed(RouteHelper.getlogin()));
   }
 
   @override

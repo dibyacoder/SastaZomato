@@ -5,6 +5,8 @@ import '../pages/cart/cart_page.dart';
 import '../pages/food_details/popularfood_details.dart';
 import '../pages/food_details/recommended_food_details.dart';
 import '../pages/homepage/home_page.dart';
+import '../pages/login_page/login_page.dart';
+import '../pages/login_page/signup_page.dart';
 import '../pages/splash_page/splash_page.dart';
 
 class RouteHelper {
@@ -13,9 +15,13 @@ class RouteHelper {
   static const String recommendedFood = '/recommended-food';
   static const String cartPage = '/cart-page';
   static const String splashPage = '/splash-page';
+  static const String loginPage = '/login-page';
+  static const String signupPage = '/signup-page';
 
   static String getInitial() => '$initial';
   static String getsplash() => '$splashPage';
+  static String getlogin() => '$loginPage';
+  static String getsignup() => '$signupPage';
   static String getPopularFood(int pageId, String page) =>
       '$popularFood?pageId=$pageId&page=$page';
   static String getRecommendedFood(int pageId) =>
@@ -46,6 +52,18 @@ class RouteHelper {
         name: cartPage,
         page: () {
           return CartPage();
+        },
+        transition: Transition.fadeIn),
+    GetPage(
+        name: loginPage,
+        page: () {
+          return login_page();
+        },
+        transition: Transition.fadeIn),
+    GetPage(
+        name: signupPage,
+        page: () {
+          return signup_page();
         },
         transition: Transition.fadeIn),
   ];

@@ -1,4 +1,5 @@
 import 'package:ecomapp/pages/cart/cart_history.dart';
+import 'package:ecomapp/pages/ProfilePage/profile_page.dart';
 import 'package:ecomapp/pages/homepage/food_page_body.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
       MainFoodPage(),
       Container(child: Center(child: Text("Next page"))),
       cart_history_page(),
-      Container(child: Center(child: Text("Next next next page"))),
+      profile_page(),
     ];
   }
 
