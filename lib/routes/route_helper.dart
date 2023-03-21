@@ -1,4 +1,6 @@
 import 'package:ecomapp/pages/homepage/main_foodpage.dart';
+import 'package:ecomapp/pages/login_page/phone.dart';
+import 'package:ecomapp/pages/login_page/verify.dart';
 import 'package:get/get.dart';
 
 import '../pages/cart/cart_page.dart';
@@ -17,10 +19,14 @@ class RouteHelper {
   static const String splashPage = '/splash-page';
   static const String loginPage = '/login-page';
   static const String signupPage = '/signup-page';
+  static const String PhonePage = '/phone-page';
+  static const String VerifyPage = '/verify-page';
 
   static String getInitial() => '$initial';
   static String getsplash() => '$splashPage';
   static String getlogin() => '$loginPage';
+  static String getphone() => '$PhonePage';
+  static String getVerify() => '$VerifyPage';
   static String getsignup() => '$signupPage';
   static String getPopularFood(int pageId, String page) =>
       '$popularFood?pageId=$pageId&page=$page';
@@ -31,6 +37,8 @@ class RouteHelper {
   static List<GetPage> routes = [
     GetPage(name: initial, page: () => HomePage()),
     GetPage(name: splashPage, page: () => splash_page()),
+    GetPage(name: PhonePage, page: () => MyPhone()),
+    GetPage(name: VerifyPage, page: () => MyVerify()),
     GetPage(
         name: recommendedFood,
         page: () {

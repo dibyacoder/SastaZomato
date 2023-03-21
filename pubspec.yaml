@@ -50,6 +50,7 @@ dependencies:
   fluttertoast: ^8.2.1
   provider: ^6.0.5
   google_sign_in: ^6.0.2
+  pinput: ^2.2.31
   
 
 dev_dependencies:

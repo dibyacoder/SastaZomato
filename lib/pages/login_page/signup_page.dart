@@ -224,9 +224,14 @@ class _signup_pageState extends State<signup_page> {
                         SizedBox(
                           width: 20,
                         ),
-                        general_font(
-                          text: "Sign Up With PhoneNo",
-                          color: Colors.white,
+                        GestureDetector(
+                          onTap: () {
+                            Get.toNamed(RouteHelper.getphone());
+                          },
+                          child: general_font(
+                            text: "Sign Up With PhoneNo",
+                            color: Colors.white,
+                          ),
                         )
                       ],
                     ),
